@@ -1,17 +1,12 @@
 #include<iostream>
 #include<conio.h>
 #include<windows.h>
+#include<ctime>
+#include "snake.cpp"
 using namespace std;
-bool gameOver;
-const int width = 20;
-const int height = 20;
-int x, y, fruitX, fruitY, score;
-int tailX[100], tailY[100];
-int nTail;
-enum eDirection{ STOP = 0, LEFT, RIGHT, UP, DOWN};
-eDirection dir;
-void setup()
+void snake :: setup()
 {
+    srand(time(0));
     gameOver = false;
     dir = STOP;
     x = width/2;
@@ -19,8 +14,9 @@ void setup()
     fruitX = rand() % width;
     fruitY = rand() % height;
     score = 0;
+    nTail = 0;
 }
-void draw()
+void snake :: draw()
 {
     system("cls");
     for(int i = 0; i < width + 2; i++)
@@ -74,7 +70,7 @@ void draw()
     cout << endl;
     cout << "Score:" << score << endl;
 }
-void input()
+void snake :: input()
 {
     if(_kbhit())
     {
@@ -98,7 +94,7 @@ void input()
         }
     }
 }
-void logic()
+void snake :: logic()
 {
     int prevX = tailX[0];
     int prevY = tailY[0];
@@ -152,14 +148,19 @@ void logic()
         nTail++;
     }
 }
+bool snake :: isGameOver()
+{
+    return gameOver;
+}
 int main()
 {
-    setup();
-    while(!gameOver)
+    snake game;
+    game.setup();
+    while(!game.isGameOver())
     {
-        draw();
-        input();
-        logic();
+        game.draw();
+        game.input();
+        game.logic();
         Sleep(10);
     }
     return 0;
