@@ -1,21 +1,23 @@
-🐍 Snake Game
+# 🐍 Snake Game
 
-A simple and fun console-based Snake Game developed in C++. The game lets you control a snake using keyboard inputs to collect food and grow longer — just like the classic Nokia game!
+A simple and fun console-based Snake Game developed in **C++**. The game lets you control a snake using keyboard inputs to collect food and grow longer — just like the classic Nokia game!
 
-🎮 Features
+## 🎮 Features
 
 - Real-time keyboard controls
 - Increasing difficulty as the snake grows
+- Collision detection with walls and the snake's own body
 - Console-based rendering
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 - Language: C++
 - Environment: Console / Command Line
 
-📦 How to Run
+## 📦 How to Run
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/iparigoel/snake_game.git
-   cd snake_game
+   git clone https://github.com/yourusername/snake-game.git
+   cd snake-game
+
