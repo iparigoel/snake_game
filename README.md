@@ -18,6 +18,6 @@ A simple and fun console-based Snake Game developed in **C++**. The game lets yo
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/yourusername/snake-game.git
-   cd snake-game
+   git clone https://github.com/iparigoel/snake_game.git
+   cd snake_game
 
